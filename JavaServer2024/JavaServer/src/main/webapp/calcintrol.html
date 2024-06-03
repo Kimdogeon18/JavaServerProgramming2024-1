@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>계산기 여러 실습 버전</title>
+<script src="jscalcu.js">
+
+
+</script>
+</head>
+<body>
+
+<h1> 김도건의 계산기 통합버전 </h1>
+<h2> Javascript 버전 </h2>
+
+<input type="text" id="n1" size="10" value=3>
+
+<select id="op">
+	<option> + </option>
+	<option> - </option>
+	<option selected> * </option>
+	<option> / </option>
+</select>
+
+<input type="text" id="n2" size="10" value=7.7>
+
+<input type="button" value="실행" onClick="calcjs()">
+<input type="text" id="ans" size="20" />
+
+
+<hr>
+
+<h2> JSP 버전 </h2>
+<form method="post" action="jspcalcu.jsp">
+<input type="text" name="n1" size="10" value=3>
+
+<select name="op">
+	<option> + </option>
+	<option> - </option>
+	<option selected> * </option>
+	<option> / </option>
+</select>
+
+<input type="text" name="n2" size="10" value=7>
+
+<input type="submit" value="실행" >
+
+</form>
+
+<hr>
+
+<h2> Servlet 버전 </h2>
+<form method="get" action="/JavaServer/calcuServlet">
+<input type="text" name="n1" size="10" />
+
+<select name="op">
+	<option> + </option>
+	<option> - </option>
+	<option selected> * </option>
+	<option> / </option>
+</select>
+
+<input type="text" name="n2" size="10" value=7>
+
+<input type="submit" value="서브릿호출" />
+
+</body>
+</html>
